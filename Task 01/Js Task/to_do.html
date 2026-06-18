@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_do counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            text-align: center;
+            margin-top: 60px;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #habitList {
+            list-style: none;
+            padding: 0;
+            width: 360px;
+            margin: 0 auto 20px auto;
+        }
+
+        #habitList li {
+            background: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #habitList li button {
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        #habitList li button:first-of-type {
+            background: #28a745;
+            color: white;
+        }
+
+        #habitList li button:last-of-type {
+            background: #dc3545;
+            color: white;
+        }
+
+        #addhabit {
+            padding: 10px;
+            width: 240px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        #add {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            background: #4a6cf7;
+            color: white;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+
+        #add:hover {
+            background: #3a57d6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add habit</h1>
+    <ul id="habitList">
+        <li id="no_item">No item added yet</li>
+    </ul>
+    <input type="text" placeholder="Add habit name" id="addhabit">
+    <button id="add">add</button>
+
+    <script>
+        // Element variables ke naam clear rakhein
+        let habitInput = document.getElementById('addhabit');
+        let addBtn = document.getElementById('add');
+        let habitList = document.getElementById('habitList');
+        let item_clear = document.getElementById('no_item');
+        let count = 0
+
+
+        addBtn.addEventListener('click', () => {
+            if (habitInput.value == "") {
+                alert("Please Enter some thing");
+                return;
+            }
+
+            if (item_clear) {
+                item_clear.remove();
+                item_clear = null;
+            }
+            let newHabitText = habitInput.value;
+
+            let li = document.createElement("li");
+
+            li.id = count;
+            li.textContent = newHabitText;
+
+            let done_buton = document.createElement('button');
+            let delete_button = document.createElement('button');
+            done_buton.textContent = "Done";
+            delete_button.textContent = "Delete"
+
+
+
+            li.appendChild(done_buton);
+
+            li.appendChild(delete_button);
+
+            habitList.appendChild(li);
+
+            count++;
+            delete_button.addEventListener('click', function (e) {
+                e.target.parentElement.remove();
+            });
+            done_buton.addEventListener('click', (e) => {
+                done_buton.innerText = "✔";
+                done_buton.disabled = true;
+            });
+        });
+
+    </script>
+</body>
+
+</html>
