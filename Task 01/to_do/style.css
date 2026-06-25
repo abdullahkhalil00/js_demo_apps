@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    text-align: center;
+    margin-top: 60px;
+    color: #222;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#habitList {
+    list-style: none;
+    padding: 0;
+    width: 360px;
+    margin: 0 auto 20px auto;
+}
+
+#habitList li {
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#habitList li button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+#habitList li button:first-of-type {
+    background: #28a745;
+    color: white;
+}
+
+#habitList li button:last-of-type {
+    background: #dc3545;
+    color: white;
+}
+
+#addhabit {
+    padding: 10px;
+    width: 240px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+#add {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #4a6cf7;
+    color: white;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+#add:hover {
+    background: #3a57d6;
+}
