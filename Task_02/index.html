@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task Showcase</title>
+    <style>
+        :root {
+            --primary: #4a6cf7;
+            --secondary: #6c757d;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #212529;
+            --text-light: #6c757d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            width: 100%;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 160px;
+            background: linear-gradient(135deg, var(--primary), #8e2de2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-content h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .card-content p {
+            margin: 0;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            padding: 1rem 1.5rem;
+            background: #fdfdfd;
+            border-top: 1px solid #f0f0f0;
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Project Icons */
+        .icon-counter::before {
+            content: '🔢';
+        }
+
+        .icon-quiz::before {
+            content: '📝';
+        }
+
+        .icon-todo::before {
+            content: '✅';
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JS Project Hub</h1>
+        <p>A collection of mini-applications built for learning and demonstration.</p>
+    </header>
+
+    <div class="container">
+        <!-- Promise Project -->
+        <a href="promiseJs/index.html" class="card" id="project-counter">
+            <div class="card-image"><span class="icon-counter"></span></div>
+            <div class="card-content">
+                <h2>Promise Based Order System</h2>
+                <p>A coffee order simulator built with JavaScript Promises. It demonstrates asynchronous operations
+                    using resolve, reject, then, catch, and finally.</p>
+            </div>
+            <div class="card-footer">Open Project &rarr;</div>
+        </a>
+
+        <!-- API request -->
+        <a href="apiRequestJs/index.html" class="card" id="project-quiz">
+            <div class="card-image"><span class="icon-quiz"></span></div>
+            <div class="card-content">
+                <h2>Random User API</h2>
+                <p>A JavaScript application that fetches random user data from an external API and displays the user's
+                    profile, name, email, and country.</p>
+            </div>
+            <div class="card-footer">Open Project &rarr;</div>
+        </a>
+
+        <!-- To-Do Project
+        <a href="to_do/" class="card" id="project-todo">
+            <div class="card-image"><span class="icon-todo"></span></div>
+            <div class="card-content">
+                <h2>Habit Tracker / To-Do</h2>
+                <p>Stay organized and build better habits. Add, mark as done, or remove tasks from your personalized
+                    list.</p>
+            </div>
+            <div class="card-footer">Open Project &rarr;</div>
+        </a>
+    </div> -->
+
+        <footer>
+            &copy; 2026 JavaScript Task Collection. Built for excellence.
+        </footer>
+
+</body>
+
+</html>
