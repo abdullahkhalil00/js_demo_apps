@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 420px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .admin {
+            background: #2563eb;
+            color: #fff;
+        }
+
+        .admin:hover {
+            background: #1d4ed8;
+        }
+
+        .user {
+            background: #16a34a;
+            color: #fff;
+        }
+
+        .user:hover {
+            background: #15803d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Library Management System</h1>
+
+        <p>
+            Choose a panel to continue.
+        </p>
+
+        <div class="links">
+            <a class="btn admin" href="./adminPannel/adminPannel.html">
+                Admin Panel
+            </a>
+
+            <a class="btn user" href="./userPannel/userPannel.html">
+                User Panel
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
